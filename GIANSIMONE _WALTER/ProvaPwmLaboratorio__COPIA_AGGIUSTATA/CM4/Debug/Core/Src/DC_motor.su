@@ -1,0 +1,4 @@
+../Core/Src/DC_motor.c:3:7:DegreeSec2RPM	24	static
+../Core/Src/DC_motor.c:8:7:Voltage2Duty	24	static
+../Core/Src/DC_motor.c:27:9:Ref2Direction	24	static
+../Core/Src/DC_motor.c:40:6:set_PWM_and_dir	16	static
