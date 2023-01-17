@@ -61,8 +61,8 @@ all: main-build
 main-build: BoschImuBNO055_h7_CM4.elf secondary-outputs
 
 # Tool invocations
-BoschImuBNO055_h7_CM4.elf BoschImuBNO055_h7_CM4.map: $(OBJS) $(USER_OBJS) C:\Users\Marco\STM32CubeIDE\workspace_1.10.1\BoschImuBNO055_h7\CM4\STM32H745ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "BoschImuBNO055_h7_CM4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Marco\STM32CubeIDE\workspace_1.10.1\BoschImuBNO055_h7\CM4\STM32H745ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BoschImuBNO055_h7_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+BoschImuBNO055_h7_CM4.elf BoschImuBNO055_h7_CM4.map: $(OBJS) $(USER_OBJS) C:\Users\lucab\OneDrive\Desktop\Bosch\Low\ Level\Low-level-Bosch\ALESSANDRO_MARCO\CM4\STM32H745ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "BoschImuBNO055_h7_CM4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\lucab\OneDrive\Desktop\Bosch\Low Level\Low-level-Bosch\ALESSANDRO_MARCO\CM4\STM32H745ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BoschImuBNO055_h7_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
