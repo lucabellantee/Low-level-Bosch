@@ -1,0 +1,4 @@
+../Core/Src/enc2.c:20:7:get_position_enc2	16	static
+../Core/Src/enc2.c:23:7:get_position_in_rad_enc2	16	static
+../Core/Src/enc2.c:28:7:get_speed_in_degree_per_sec_enc2	16	static
+../Core/Src/enc2.c:31:7:get_speed_in_rad_per_sec_enc2	16	static

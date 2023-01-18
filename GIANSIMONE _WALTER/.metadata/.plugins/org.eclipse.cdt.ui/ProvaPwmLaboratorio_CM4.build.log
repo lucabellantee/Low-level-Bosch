@@ -1,0 +1,24 @@
+17:41:27 **** Incremental Build of configuration Debug for project ProvaPwmLaboratorio_CM4 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:150:6: warning: unused variable 'minPot' [-Wunused-variable]
+  150 |  int minPot = 0;
+      |      ^~~~~~
+../Core/Src/main.c:149:6: warning: unused variable 'percentuale' [-Wunused-variable]
+  149 |  int percentuale = 20;
+      |      ^~~~~~~~~~~
+arm-none-eabi-gcc -o "ProvaPwmLaboratorio_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\lucab\OneDrive\Desktop\Ingegneria\TERZO_ANNO\PRIMO_SEMESTRE\PWM_PID_ENCODER_MOTORE__DC\CM4\STM32H745ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ProvaPwmLaboratorio_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ProvaPwmLaboratorio_CM4.elf
+ 
+arm-none-eabi-size   ProvaPwmLaboratorio_CM4.elf 
+arm-none-eabi-objdump -h -S  ProvaPwmLaboratorio_CM4.elf  > "ProvaPwmLaboratorio_CM4.list"
+   text	   data	    bss	    dec	    hex	filename
+  48100	    516	   2080	  50696	   c608	ProvaPwmLaboratorio_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: ProvaPwmLaboratorio_CM4.list
+ 
+
+17:41:29 Build Finished. 0 errors, 2 warnings. (took 1s.510ms)
+
