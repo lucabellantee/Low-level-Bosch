@@ -1,5 +1,5 @@
 Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o: \
- C:/Users/lucab/OneDrive/Desktop/Bosch/Low\ Level/Low-level-Bosch/ALESSANDRO_MARCO/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
+ C:/Users/lucab/OneDrive/Desktop/Bosch/Low\ Level/Low-level-Bosch/ALESSANDRO_MARCO/Progetto_IMU/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h745xx.h \
  ../../Drivers/CMSIS/Include/core_cm7.h \

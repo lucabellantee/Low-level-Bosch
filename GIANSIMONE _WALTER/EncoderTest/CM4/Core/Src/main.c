@@ -83,8 +83,8 @@ int dir;
 float speed;
 double old_delta_angle;
 int old_dir;
-int ENCODER_PPR = 500;
-int GEARBOX_RATIO = 66;
+int ENCODER_PPR = 13; //500
+int GEARBOX_RATIO = 51; //66
 int ENCODER_COUNTING_MODE =4;
 double dt = 0.05;
 

@@ -1307,12 +1307,12 @@ int main(void)
 /* USER CODE BEGIN Boot_Mode_Sequence_1 */
   /*HW semaphore Clock enable*/
   __HAL_RCC_HSEM_CLK_ENABLE();
- 8101092:	4b81      	ldr	r3, [pc, #516]	; (8101298 <main+0x20c>)
+ 8101092:	4b82      	ldr	r3, [pc, #520]	; (810129c <main+0x210>)
  8101094:	f8d3 30e0 	ldr.w	r3, [r3, #224]	; 0xe0
- 8101098:	4a7f      	ldr	r2, [pc, #508]	; (8101298 <main+0x20c>)
+ 8101098:	4a80      	ldr	r2, [pc, #512]	; (810129c <main+0x210>)
  810109a:	f043 7300 	orr.w	r3, r3, #33554432	; 0x2000000
  810109e:	f8c2 30e0 	str.w	r3, [r2, #224]	; 0xe0
- 81010a2:	4b7d      	ldr	r3, [pc, #500]	; (8101298 <main+0x20c>)
+ 81010a2:	4b7e      	ldr	r3, [pc, #504]	; (810129c <main+0x210>)
  81010a4:	f8d3 30e0 	ldr.w	r3, [r3, #224]	; 0xe0
  81010a8:	f003 7300 	and.w	r3, r3, #33554432	; 0x2000000
  81010ac:	607b      	str	r3, [r7, #4]
@@ -1334,21 +1334,21 @@ int main(void)
  81010c0:	f000 ffe8 	bl	8102094 <HAL_PWREx_EnterSTOPMode>
   /* Clear HSEM flag */
   __HAL_HSEM_CLEAR_FLAG(__HAL_HSEM_SEMID_TO_MASK(HSEM_ID_0));
- 81010c4:	4b75      	ldr	r3, [pc, #468]	; (810129c <main+0x210>)
+ 81010c4:	4b76      	ldr	r3, [pc, #472]	; (81012a0 <main+0x214>)
  81010c6:	681b      	ldr	r3, [r3, #0]
  81010c8:	091b      	lsrs	r3, r3, #4
  81010ca:	f003 030f 	and.w	r3, r3, #15
  81010ce:	2b07      	cmp	r3, #7
  81010d0:	d108      	bne.n	81010e4 <main+0x58>
- 81010d2:	4b73      	ldr	r3, [pc, #460]	; (81012a0 <main+0x214>)
+ 81010d2:	4b74      	ldr	r3, [pc, #464]	; (81012a4 <main+0x218>)
  81010d4:	f8d3 3104 	ldr.w	r3, [r3, #260]	; 0x104
- 81010d8:	4a71      	ldr	r2, [pc, #452]	; (81012a0 <main+0x214>)
+ 81010d8:	4a72      	ldr	r2, [pc, #456]	; (81012a4 <main+0x218>)
  81010da:	f043 0301 	orr.w	r3, r3, #1
  81010de:	f8c2 3104 	str.w	r3, [r2, #260]	; 0x104
  81010e2:	e007      	b.n	81010f4 <main+0x68>
- 81010e4:	4b6e      	ldr	r3, [pc, #440]	; (81012a0 <main+0x214>)
+ 81010e4:	4b6f      	ldr	r3, [pc, #444]	; (81012a4 <main+0x218>)
  81010e6:	f8d3 3114 	ldr.w	r3, [r3, #276]	; 0x114
- 81010ea:	4a6d      	ldr	r2, [pc, #436]	; (81012a0 <main+0x214>)
+ 81010ea:	4a6e      	ldr	r2, [pc, #440]	; (81012a4 <main+0x218>)
  81010ec:	f043 0301 	orr.w	r3, r3, #1
  81010f0:	f8c2 3114 	str.w	r3, [r2, #276]	; 0x114
 
@@ -1374,10 +1374,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TIM_Encoder_Start_IT(&htim2, TIM_CHANNEL_ALL);
  8101108:	213c      	movs	r1, #60	; 0x3c
- 810110a:	4866      	ldr	r0, [pc, #408]	; (81012a4 <main+0x218>)
+ 810110a:	4867      	ldr	r0, [pc, #412]	; (81012a8 <main+0x21c>)
  810110c:	f002 ff00 	bl	8103f10 <HAL_TIM_Encoder_Start_IT>
   HAL_TIM_Base_Start_IT(&htim3);
- 8101110:	4865      	ldr	r0, [pc, #404]	; (81012a8 <main+0x21c>)
+ 8101110:	4866      	ldr	r0, [pc, #408]	; (81012ac <main+0x220>)
  8101112:	f002 fddf 	bl	8103cd4 <HAL_TIM_Base_Start_IT>
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -1385,193 +1385,192 @@ int main(void)
   // Timer di 100 ms
 
 	     if(flag_Tc == 1)
- 8101116:	4b65      	ldr	r3, [pc, #404]	; (81012ac <main+0x220>)
+ 8101116:	4b66      	ldr	r3, [pc, #408]	; (81012b0 <main+0x224>)
  8101118:	681b      	ldr	r3, [r3, #0]
  810111a:	2b01      	cmp	r3, #1
  810111c:	d1fb      	bne.n	8101116 <main+0x8a>
 	     {
 	    	 //flag_100ms = 0;
 	    	 flag_Tc = 0;
- 810111e:	4b63      	ldr	r3, [pc, #396]	; (81012ac <main+0x220>)
+ 810111e:	4b64      	ldr	r3, [pc, #400]	; (81012b0 <main+0x224>)
  8101120:	2200      	movs	r2, #0
  8101122:	601a      	str	r2, [r3, #0]
-	    	 counts = TIM4->CNT; //Prendo il valore
- 8101124:	4b62      	ldr	r3, [pc, #392]	; (81012b0 <main+0x224>)
- 8101126:	6a5b      	ldr	r3, [r3, #36]	; 0x24
- 8101128:	461a      	mov	r2, r3
- 810112a:	4b62      	ldr	r3, [pc, #392]	; (81012b4 <main+0x228>)
- 810112c:	601a      	str	r2, [r3, #0]
+	    	 counts = TIM2->CNT; //Prendo il valore
+ 8101124:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
+ 8101128:	6a5b      	ldr	r3, [r3, #36]	; 0x24
+ 810112a:	461a      	mov	r2, r3
+ 810112c:	4b61      	ldr	r3, [pc, #388]	; (81012b4 <main+0x228>)
+ 810112e:	601a      	str	r2, [r3, #0]
 	    	 //printf("%d\r\n", counts);
 	    	 //printf("------------\r\n");
 
 	    	 //Angolo
 	    	 delta_angle = (double)counts*360 / (ENCODER_PPR * ENCODER_COUNTING_MODE * GEARBOX_RATIO);
- 810112e:	4b61      	ldr	r3, [pc, #388]	; (81012b4 <main+0x228>)
- 8101130:	681b      	ldr	r3, [r3, #0]
- 8101132:	4618      	mov	r0, r3
- 8101134:	f7ff fa7e 	bl	8100634 <__aeabi_i2d>
- 8101138:	f04f 0200 	mov.w	r2, #0
- 810113c:	4b5e      	ldr	r3, [pc, #376]	; (81012b8 <main+0x22c>)
- 810113e:	f7ff fae3 	bl	8100708 <__aeabi_dmul>
- 8101142:	4602      	mov	r2, r0
- 8101144:	460b      	mov	r3, r1
- 8101146:	4614      	mov	r4, r2
- 8101148:	461d      	mov	r5, r3
- 810114a:	4b5c      	ldr	r3, [pc, #368]	; (81012bc <main+0x230>)
- 810114c:	681b      	ldr	r3, [r3, #0]
- 810114e:	4a5c      	ldr	r2, [pc, #368]	; (81012c0 <main+0x234>)
- 8101150:	6812      	ldr	r2, [r2, #0]
- 8101152:	fb02 f303 	mul.w	r3, r2, r3
- 8101156:	4a5b      	ldr	r2, [pc, #364]	; (81012c4 <main+0x238>)
- 8101158:	6812      	ldr	r2, [r2, #0]
- 810115a:	fb02 f303 	mul.w	r3, r2, r3
- 810115e:	4618      	mov	r0, r3
- 8101160:	f7ff fa68 	bl	8100634 <__aeabi_i2d>
- 8101164:	4602      	mov	r2, r0
- 8101166:	460b      	mov	r3, r1
- 8101168:	4620      	mov	r0, r4
- 810116a:	4629      	mov	r1, r5
- 810116c:	f7ff fbf6 	bl	810095c <__aeabi_ddiv>
- 8101170:	4602      	mov	r2, r0
- 8101172:	460b      	mov	r3, r1
- 8101174:	4954      	ldr	r1, [pc, #336]	; (81012c8 <main+0x23c>)
- 8101176:	e9c1 2300 	strd	r2, r3, [r1]
+ 8101130:	4b60      	ldr	r3, [pc, #384]	; (81012b4 <main+0x228>)
+ 8101132:	681b      	ldr	r3, [r3, #0]
+ 8101134:	4618      	mov	r0, r3
+ 8101136:	f7ff fa7d 	bl	8100634 <__aeabi_i2d>
+ 810113a:	f04f 0200 	mov.w	r2, #0
+ 810113e:	4b5e      	ldr	r3, [pc, #376]	; (81012b8 <main+0x22c>)
+ 8101140:	f7ff fae2 	bl	8100708 <__aeabi_dmul>
+ 8101144:	4602      	mov	r2, r0
+ 8101146:	460b      	mov	r3, r1
+ 8101148:	4614      	mov	r4, r2
+ 810114a:	461d      	mov	r5, r3
+ 810114c:	4b5b      	ldr	r3, [pc, #364]	; (81012bc <main+0x230>)
+ 810114e:	681b      	ldr	r3, [r3, #0]
+ 8101150:	4a5b      	ldr	r2, [pc, #364]	; (81012c0 <main+0x234>)
+ 8101152:	6812      	ldr	r2, [r2, #0]
+ 8101154:	fb02 f303 	mul.w	r3, r2, r3
+ 8101158:	4a5a      	ldr	r2, [pc, #360]	; (81012c4 <main+0x238>)
+ 810115a:	6812      	ldr	r2, [r2, #0]
+ 810115c:	fb02 f303 	mul.w	r3, r2, r3
+ 8101160:	4618      	mov	r0, r3
+ 8101162:	f7ff fa67 	bl	8100634 <__aeabi_i2d>
+ 8101166:	4602      	mov	r2, r0
+ 8101168:	460b      	mov	r3, r1
+ 810116a:	4620      	mov	r0, r4
+ 810116c:	4629      	mov	r1, r5
+ 810116e:	f7ff fbf5 	bl	810095c <__aeabi_ddiv>
+ 8101172:	4602      	mov	r2, r0
+ 8101174:	460b      	mov	r3, r1
+ 8101176:	4954      	ldr	r1, [pc, #336]	; (81012c8 <main+0x23c>)
+ 8101178:	e9c1 2300 	strd	r2, r3, [r1]
 	    	 //Velocità
 	    	 diff_angle = delta_angle - old_delta_angle;
- 810117a:	4b53      	ldr	r3, [pc, #332]	; (81012c8 <main+0x23c>)
- 810117c:	e9d3 0100 	ldrd	r0, r1, [r3]
- 8101180:	4b52      	ldr	r3, [pc, #328]	; (81012cc <main+0x240>)
- 8101182:	e9d3 2300 	ldrd	r2, r3, [r3]
- 8101186:	f7ff f907 	bl	8100398 <__aeabi_dsub>
- 810118a:	4602      	mov	r2, r0
- 810118c:	460b      	mov	r3, r1
- 810118e:	4950      	ldr	r1, [pc, #320]	; (81012d0 <main+0x244>)
- 8101190:	e9c1 2300 	strd	r2, r3, [r1]
-	    	 dir = (TIM4->CR1 & 0x0010)>>4; //0 = up, 1 = down
- 8101194:	4b46      	ldr	r3, [pc, #280]	; (81012b0 <main+0x224>)
- 8101196:	681b      	ldr	r3, [r3, #0]
- 8101198:	091b      	lsrs	r3, r3, #4
- 810119a:	f003 0301 	and.w	r3, r3, #1
- 810119e:	4a4d      	ldr	r2, [pc, #308]	; (81012d4 <main+0x248>)
- 81011a0:	6013      	str	r3, [r2, #0]
+ 810117c:	4b52      	ldr	r3, [pc, #328]	; (81012c8 <main+0x23c>)
+ 810117e:	e9d3 0100 	ldrd	r0, r1, [r3]
+ 8101182:	4b52      	ldr	r3, [pc, #328]	; (81012cc <main+0x240>)
+ 8101184:	e9d3 2300 	ldrd	r2, r3, [r3]
+ 8101188:	f7ff f906 	bl	8100398 <__aeabi_dsub>
+ 810118c:	4602      	mov	r2, r0
+ 810118e:	460b      	mov	r3, r1
+ 8101190:	494f      	ldr	r1, [pc, #316]	; (81012d0 <main+0x244>)
+ 8101192:	e9c1 2300 	strd	r2, r3, [r1]
+	    	 dir = (TIM2->CR1 & 0x0010)>>4; //0 = up, 1 = down
+ 8101196:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
+ 810119a:	681b      	ldr	r3, [r3, #0]
+ 810119c:	091b      	lsrs	r3, r3, #4
+ 810119e:	f003 0301 	and.w	r3, r3, #1
+ 81011a2:	4a4c      	ldr	r2, [pc, #304]	; (81012d4 <main+0x248>)
+ 81011a4:	6013      	str	r3, [r2, #0]
 	    	 if(dir == old_dir)
- 81011a2:	4b4c      	ldr	r3, [pc, #304]	; (81012d4 <main+0x248>)
- 81011a4:	681a      	ldr	r2, [r3, #0]
- 81011a6:	4b4c      	ldr	r3, [pc, #304]	; (81012d8 <main+0x24c>)
- 81011a8:	681b      	ldr	r3, [r3, #0]
- 81011aa:	429a      	cmp	r2, r3
- 81011ac:	d13a      	bne.n	8101224 <main+0x198>
+ 81011a6:	4b4b      	ldr	r3, [pc, #300]	; (81012d4 <main+0x248>)
+ 81011a8:	681a      	ldr	r2, [r3, #0]
+ 81011aa:	4b4b      	ldr	r3, [pc, #300]	; (81012d8 <main+0x24c>)
+ 81011ac:	681b      	ldr	r3, [r3, #0]
+ 81011ae:	429a      	cmp	r2, r3
+ 81011b0:	d13a      	bne.n	8101228 <main+0x19c>
 	    	 {
 	    		 if(dir == 0 && diff_angle<0)
- 81011ae:	4b49      	ldr	r3, [pc, #292]	; (81012d4 <main+0x248>)
- 81011b0:	681b      	ldr	r3, [r3, #0]
- 81011b2:	2b00      	cmp	r3, #0
- 81011b4:	d119      	bne.n	81011ea <main+0x15e>
- 81011b6:	4b46      	ldr	r3, [pc, #280]	; (81012d0 <main+0x244>)
- 81011b8:	e9d3 0100 	ldrd	r0, r1, [r3]
- 81011bc:	f04f 0200 	mov.w	r2, #0
- 81011c0:	f04f 0300 	mov.w	r3, #0
- 81011c4:	f7ff fd12 	bl	8100bec <__aeabi_dcmplt>
- 81011c8:	4603      	mov	r3, r0
- 81011ca:	2b00      	cmp	r3, #0
- 81011cc:	d00d      	beq.n	81011ea <main+0x15e>
+ 81011b2:	4b48      	ldr	r3, [pc, #288]	; (81012d4 <main+0x248>)
+ 81011b4:	681b      	ldr	r3, [r3, #0]
+ 81011b6:	2b00      	cmp	r3, #0
+ 81011b8:	d119      	bne.n	81011ee <main+0x162>
+ 81011ba:	4b45      	ldr	r3, [pc, #276]	; (81012d0 <main+0x244>)
+ 81011bc:	e9d3 0100 	ldrd	r0, r1, [r3]
+ 81011c0:	f04f 0200 	mov.w	r2, #0
+ 81011c4:	f04f 0300 	mov.w	r3, #0
+ 81011c8:	f7ff fd10 	bl	8100bec <__aeabi_dcmplt>
+ 81011cc:	4603      	mov	r3, r0
+ 81011ce:	2b00      	cmp	r3, #0
+ 81011d0:	d00d      	beq.n	81011ee <main+0x162>
 	    		 {
 	    			 diff_angle = 360 + diff_angle;
- 81011ce:	4b40      	ldr	r3, [pc, #256]	; (81012d0 <main+0x244>)
- 81011d0:	e9d3 0100 	ldrd	r0, r1, [r3]
- 81011d4:	f04f 0200 	mov.w	r2, #0
- 81011d8:	4b37      	ldr	r3, [pc, #220]	; (81012b8 <main+0x22c>)
- 81011da:	f7ff f8df 	bl	810039c <__adddf3>
- 81011de:	4602      	mov	r2, r0
- 81011e0:	460b      	mov	r3, r1
- 81011e2:	493b      	ldr	r1, [pc, #236]	; (81012d0 <main+0x244>)
- 81011e4:	e9c1 2300 	strd	r2, r3, [r1]
- 81011e8:	e01c      	b.n	8101224 <main+0x198>
+ 81011d2:	4b3f      	ldr	r3, [pc, #252]	; (81012d0 <main+0x244>)
+ 81011d4:	e9d3 0100 	ldrd	r0, r1, [r3]
+ 81011d8:	f04f 0200 	mov.w	r2, #0
+ 81011dc:	4b36      	ldr	r3, [pc, #216]	; (81012b8 <main+0x22c>)
+ 81011de:	f7ff f8dd 	bl	810039c <__adddf3>
+ 81011e2:	4602      	mov	r2, r0
+ 81011e4:	460b      	mov	r3, r1
+ 81011e6:	493a      	ldr	r1, [pc, #232]	; (81012d0 <main+0x244>)
+ 81011e8:	e9c1 2300 	strd	r2, r3, [r1]
+ 81011ec:	e01c      	b.n	8101228 <main+0x19c>
 	    		 } else if (dir == 1 && diff_angle>0)
- 81011ea:	4b3a      	ldr	r3, [pc, #232]	; (81012d4 <main+0x248>)
- 81011ec:	681b      	ldr	r3, [r3, #0]
- 81011ee:	2b01      	cmp	r3, #1
- 81011f0:	d118      	bne.n	8101224 <main+0x198>
- 81011f2:	4b37      	ldr	r3, [pc, #220]	; (81012d0 <main+0x244>)
- 81011f4:	e9d3 0100 	ldrd	r0, r1, [r3]
- 81011f8:	f04f 0200 	mov.w	r2, #0
- 81011fc:	f04f 0300 	mov.w	r3, #0
- 8101200:	f7ff fd12 	bl	8100c28 <__aeabi_dcmpgt>
- 8101204:	4603      	mov	r3, r0
- 8101206:	2b00      	cmp	r3, #0
- 8101208:	d00c      	beq.n	8101224 <main+0x198>
+ 81011ee:	4b39      	ldr	r3, [pc, #228]	; (81012d4 <main+0x248>)
+ 81011f0:	681b      	ldr	r3, [r3, #0]
+ 81011f2:	2b01      	cmp	r3, #1
+ 81011f4:	d118      	bne.n	8101228 <main+0x19c>
+ 81011f6:	4b36      	ldr	r3, [pc, #216]	; (81012d0 <main+0x244>)
+ 81011f8:	e9d3 0100 	ldrd	r0, r1, [r3]
+ 81011fc:	f04f 0200 	mov.w	r2, #0
+ 8101200:	f04f 0300 	mov.w	r3, #0
+ 8101204:	f7ff fd10 	bl	8100c28 <__aeabi_dcmpgt>
+ 8101208:	4603      	mov	r3, r0
+ 810120a:	2b00      	cmp	r3, #0
+ 810120c:	d00c      	beq.n	8101228 <main+0x19c>
 	    		 {
 	    			 diff_angle = diff_angle - 360 ;
- 810120a:	4b31      	ldr	r3, [pc, #196]	; (81012d0 <main+0x244>)
- 810120c:	e9d3 0100 	ldrd	r0, r1, [r3]
- 8101210:	f04f 0200 	mov.w	r2, #0
- 8101214:	4b28      	ldr	r3, [pc, #160]	; (81012b8 <main+0x22c>)
- 8101216:	f7ff f8bf 	bl	8100398 <__aeabi_dsub>
- 810121a:	4602      	mov	r2, r0
- 810121c:	460b      	mov	r3, r1
- 810121e:	492c      	ldr	r1, [pc, #176]	; (81012d0 <main+0x244>)
- 8101220:	e9c1 2300 	strd	r2, r3, [r1]
+ 810120e:	4b30      	ldr	r3, [pc, #192]	; (81012d0 <main+0x244>)
+ 8101210:	e9d3 0100 	ldrd	r0, r1, [r3]
+ 8101214:	f04f 0200 	mov.w	r2, #0
+ 8101218:	4b27      	ldr	r3, [pc, #156]	; (81012b8 <main+0x22c>)
+ 810121a:	f7ff f8bd 	bl	8100398 <__aeabi_dsub>
+ 810121e:	4602      	mov	r2, r0
+ 8101220:	460b      	mov	r3, r1
+ 8101222:	492b      	ldr	r1, [pc, #172]	; (81012d0 <main+0x244>)
+ 8101224:	e9c1 2300 	strd	r2, r3, [r1]
 	    		 }
 	    	 }
 	    	 speed = diff_angle/dt ;
- 8101224:	4b2a      	ldr	r3, [pc, #168]	; (81012d0 <main+0x244>)
- 8101226:	e9d3 0100 	ldrd	r0, r1, [r3]
- 810122a:	4b2c      	ldr	r3, [pc, #176]	; (81012dc <main+0x250>)
- 810122c:	e9d3 2300 	ldrd	r2, r3, [r3]
- 8101230:	f7ff fb94 	bl	810095c <__aeabi_ddiv>
- 8101234:	4602      	mov	r2, r0
- 8101236:	460b      	mov	r3, r1
- 8101238:	4610      	mov	r0, r2
- 810123a:	4619      	mov	r1, r3
- 810123c:	f7ff fd3c 	bl	8100cb8 <__aeabi_d2f>
- 8101240:	4603      	mov	r3, r0
- 8101242:	4a27      	ldr	r2, [pc, #156]	; (81012e0 <main+0x254>)
- 8101244:	6013      	str	r3, [r2, #0]
+ 8101228:	4b29      	ldr	r3, [pc, #164]	; (81012d0 <main+0x244>)
+ 810122a:	e9d3 0100 	ldrd	r0, r1, [r3]
+ 810122e:	4b2b      	ldr	r3, [pc, #172]	; (81012dc <main+0x250>)
+ 8101230:	e9d3 2300 	ldrd	r2, r3, [r3]
+ 8101234:	f7ff fb92 	bl	810095c <__aeabi_ddiv>
+ 8101238:	4602      	mov	r2, r0
+ 810123a:	460b      	mov	r3, r1
+ 810123c:	4610      	mov	r0, r2
+ 810123e:	4619      	mov	r1, r3
+ 8101240:	f7ff fd3a 	bl	8100cb8 <__aeabi_d2f>
+ 8101244:	4603      	mov	r3, r0
+ 8101246:	4a26      	ldr	r2, [pc, #152]	; (81012e0 <main+0x254>)
+ 8101248:	6013      	str	r3, [r2, #0]
 
 	    	 old_delta_angle = delta_angle;
- 8101246:	4b20      	ldr	r3, [pc, #128]	; (81012c8 <main+0x23c>)
- 8101248:	e9d3 2300 	ldrd	r2, r3, [r3]
- 810124c:	491f      	ldr	r1, [pc, #124]	; (81012cc <main+0x240>)
- 810124e:	e9c1 2300 	strd	r2, r3, [r1]
+ 810124a:	4b1f      	ldr	r3, [pc, #124]	; (81012c8 <main+0x23c>)
+ 810124c:	e9d3 2300 	ldrd	r2, r3, [r3]
+ 8101250:	491e      	ldr	r1, [pc, #120]	; (81012cc <main+0x240>)
+ 8101252:	e9c1 2300 	strd	r2, r3, [r1]
 	    	 old_dir = dir;
- 8101252:	4b20      	ldr	r3, [pc, #128]	; (81012d4 <main+0x248>)
- 8101254:	681b      	ldr	r3, [r3, #0]
- 8101256:	4a20      	ldr	r2, [pc, #128]	; (81012d8 <main+0x24c>)
- 8101258:	6013      	str	r3, [r2, #0]
+ 8101256:	4b1f      	ldr	r3, [pc, #124]	; (81012d4 <main+0x248>)
+ 8101258:	681b      	ldr	r3, [r3, #0]
+ 810125a:	4a1f      	ldr	r2, [pc, #124]	; (81012d8 <main+0x24c>)
+ 810125c:	6013      	str	r3, [r2, #0]
 
 
 	    	// printf("%f\r\n", speed*60/360);   // printf("%f\r\n", speed*60/360);
 
 	    	 printf("%d;%f;%f\r\n",counts,delta_angle,speed*60/360);
- 810125a:	4b16      	ldr	r3, [pc, #88]	; (81012b4 <main+0x228>)
- 810125c:	681e      	ldr	r6, [r3, #0]
- 810125e:	4b1a      	ldr	r3, [pc, #104]	; (81012c8 <main+0x23c>)
- 8101260:	e9d3 4500 	ldrd	r4, r5, [r3]
- 8101264:	4b1e      	ldr	r3, [pc, #120]	; (81012e0 <main+0x254>)
- 8101266:	edd3 7a00 	vldr	s15, [r3]
- 810126a:	ed9f 7a1e 	vldr	s14, [pc, #120]	; 81012e4 <main+0x258>
- 810126e:	ee67 7a87 	vmul.f32	s15, s15, s14
- 8101272:	ed9f 7a1d 	vldr	s14, [pc, #116]	; 81012e8 <main+0x25c>
- 8101276:	eec7 6a87 	vdiv.f32	s13, s15, s14
- 810127a:	ee16 0a90 	vmov	r0, s13
- 810127e:	f7ff f9eb 	bl	8100658 <__aeabi_f2d>
- 8101282:	4602      	mov	r2, r0
- 8101284:	460b      	mov	r3, r1
- 8101286:	e9cd 2300 	strd	r2, r3, [sp]
- 810128a:	4622      	mov	r2, r4
- 810128c:	462b      	mov	r3, r5
- 810128e:	4631      	mov	r1, r6
- 8101290:	4816      	ldr	r0, [pc, #88]	; (81012ec <main+0x260>)
- 8101292:	f004 ff6f 	bl	8106174 <iprintf>
+ 810125e:	4b15      	ldr	r3, [pc, #84]	; (81012b4 <main+0x228>)
+ 8101260:	681e      	ldr	r6, [r3, #0]
+ 8101262:	4b19      	ldr	r3, [pc, #100]	; (81012c8 <main+0x23c>)
+ 8101264:	e9d3 4500 	ldrd	r4, r5, [r3]
+ 8101268:	4b1d      	ldr	r3, [pc, #116]	; (81012e0 <main+0x254>)
+ 810126a:	edd3 7a00 	vldr	s15, [r3]
+ 810126e:	ed9f 7a1d 	vldr	s14, [pc, #116]	; 81012e4 <main+0x258>
+ 8101272:	ee67 7a87 	vmul.f32	s15, s15, s14
+ 8101276:	ed9f 7a1c 	vldr	s14, [pc, #112]	; 81012e8 <main+0x25c>
+ 810127a:	eec7 6a87 	vdiv.f32	s13, s15, s14
+ 810127e:	ee16 0a90 	vmov	r0, s13
+ 8101282:	f7ff f9e9 	bl	8100658 <__aeabi_f2d>
+ 8101286:	4602      	mov	r2, r0
+ 8101288:	460b      	mov	r3, r1
+ 810128a:	e9cd 2300 	strd	r2, r3, [sp]
+ 810128e:	4622      	mov	r2, r4
+ 8101290:	462b      	mov	r3, r5
+ 8101292:	4631      	mov	r1, r6
+ 8101294:	4815      	ldr	r0, [pc, #84]	; (81012ec <main+0x260>)
+ 8101296:	f004 ff6d 	bl	8106174 <iprintf>
 	     if(flag_Tc == 1)
- 8101296:	e73e      	b.n	8101116 <main+0x8a>
- 8101298:	58024400 	.word	0x58024400
- 810129c:	e000ed00 	.word	0xe000ed00
- 81012a0:	58026400 	.word	0x58026400
- 81012a4:	10000214 	.word	0x10000214
- 81012a8:	10000260 	.word	0x10000260
- 81012ac:	1000033c 	.word	0x1000033c
- 81012b0:	40000800 	.word	0x40000800
+ 810129a:	e73c      	b.n	8101116 <main+0x8a>
+ 810129c:	58024400 	.word	0x58024400
+ 81012a0:	e000ed00 	.word	0xe000ed00
+ 81012a4:	58026400 	.word	0x58026400
+ 81012a8:	10000214 	.word	0x10000214
+ 81012ac:	10000260 	.word	0x10000260
+ 81012b0:	1000033c 	.word	0x1000033c
  81012b4:	10000340 	.word	0x10000340
  81012b8:	40768000 	.word	0x40768000
  81012bc:	10000008 	.word	0x10000008
