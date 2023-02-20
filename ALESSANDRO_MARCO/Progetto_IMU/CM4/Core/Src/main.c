@@ -148,27 +148,27 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  bno055_vector_t v = bno055_getVectorEuler();
-	      printf("Heading: %.2f Roll: %.2f Pitch: %.2f\r\n", v.x, v.y, v.z);
+	     // printf("Heading: %.2f Roll: %.2f Pitch: %.2f\r\n", v.x, v.y, v.z);
 
 	      v = bno055_getVectorQuaternion();
-	      printf("W: %.2f X: %.2f Y: %.2f Z: %.2f\r\n", v.w, v.x, v.y, v.z);
+	  //    printf("W: %.2f X: %.2f Y: %.2f Z: %.2f\r\n", v.w, v.x, v.y, v.z);
 
 	      v = bno055_getVectorMagnetometer();
-	      printf("MX: %.2f MY: %.2f MZ: %.2f\r\n", v.x, v.y, v.z);
+	    //  printf("MX: %.2f MY: %.2f MZ: %.2f\r\n", v.x, v.y, v.z);
 
 	      v = bno055_getVectorGyroscope();
-	      printf("GX: %.2f GY: %.2f GZ: %.2f\r\n", v.x, v.y, v.z);
-
+	      //printf("GX: %.2f GY: %.2f GZ: %.2f\r\n", v.x, v.y, v.z);
+	      printf("%.2f\r\n",v.z*60/360);
 	      v = bno055_getVectorAccelerometer();
-	      printf("AX: %.2f AY: %.2f AZ: %.2f\r\n", v.x, v.y, v.z);
+	      //printf("AX: %.2f AY: %.2f AZ: %.2f\r\n", v.x, v.y, v.z);
 
 	      v = bno055_getVectorLinearAccel();
-	      printf("LAX: %.2f LAY: %.2f LAZ: %.2f\r\n", v.x, v.y, v.z);
+	     // printf("LAX: %.2f LAY: %.2f LAZ: %.2f\r\n", v.x, v.y, v.z);
 
 	      v = bno055_getVectorGravity();
-	      printf("GrX: %.2f GrY: %.2f GrZ: %.2f\r\n", v.x, v.y, v.z);
+	     // printf("GrX: %.2f GrY: %.2f GrZ: %.2f\r\n", v.x, v.y, v.z);
 
-	      printf("\r\n\r\n");
+	      //printf("\r\n\r\n");
 	      HAL_Delay(1000);
 
 	      bno055_axis_map_t axis = {

@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\lucab\OneDrive\Desktop\Bosch\Low Level\Macchina-Autonoma"/>
 			<item value="C:\Users\lucab\OneDrive\Desktop\Bosch\Low Level\Low-level-Bosch\ALESSANDRO_MARCO\Progetto_IMU"/>
 			<item value="C:\Users\lucab\OneDrive\Desktop\Bosch\IMU\bno055_stm32-master"/>
 			<item value="C:\Users\lucab\OneDrive\Desktop\Ingegneria\TERZO_ANNO\PRIMO_SEMESTRE\PWM_PID_ENCODER_MOTORE__DC"/>

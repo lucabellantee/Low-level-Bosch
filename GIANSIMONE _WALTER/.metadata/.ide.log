@@ -7268,3 +7268,22 @@
 2023-01-19 17:19:09,250 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 5429mS.
 2023-01-19 17:19:09,251 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
 2023-01-19 17:19:09,252 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-02-02 18:47:18,211 [INFO] Activator:177 - 
+
+
+2023-02-02 18:47:18,211 [INFO] Activator:178 - !SESSION log4j initialized
+2023-02-13 16:55:19,809 [INFO] Activator:177 - 
+
+
+2023-02-13 16:55:19,811 [INFO] Activator:178 - !SESSION log4j initialized
+2023-02-13 16:55:55,872 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-02-13 16:55:55,873 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-02-13 16:55:55,876 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-02-13 16:56:41,391 [ERROR] ApiDbMcu:1619 - Can't use Application install path:
+2023-02-13 16:56:46,052 [WARN] RulesReader:63 - Compatibility file://mcu/compatibility.xml not found
+2023-02-13 16:59:31,538 [INFO] Activator:177 - 
+
+
+2023-02-13 16:59:31,539 [INFO] Activator:178 - !SESSION log4j initialized
+2023-02-13 16:59:33,413 [ERROR] ApiDbMcu:1619 - Can't use Application install path:
+2023-02-13 16:59:38,015 [WARN] RulesReader:63 - Compatibility file://mcu/compatibility.xml not found
